@@ -1,7 +1,7 @@
 import Login from './components/Signin';
 import Home from './components/Home';
 
-import { Routes, Route, BrowserRouter} from 'react-router-dom'
+import { Routes, Route, BrowserRouter,HashRouter} from 'react-router-dom'
 import Register from './components/Signup';
 import Admin from './components/admin';
 import Pharmacist from './components/pharmacist';
@@ -33,7 +33,7 @@ function App() {
   function Page(){
     return (
       <div>
-        <BrowserRouter>
+        <HashRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/log" element={<Login />}/>  
@@ -61,7 +61,7 @@ function App() {
             
                
         </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
